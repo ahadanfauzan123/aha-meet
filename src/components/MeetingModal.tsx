@@ -23,13 +23,13 @@ interface Props {
 function MeetingModal({ className, title, buttonText, handleClick, isOpen, onClose, children }: Props) {
   return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className='flex w-full max-w-[520px] border-none flex-col gap-6 bg-dark-1 px-6 py-9 text-white'>
+      <DialogContent className='flex w-full max-w-[520px] border-none flex-col gap-6 bg-white dark:bg-dark-1 px-6 py-9'>
             <div className='flex flex-col gap-6'>
                   <h1 className={cn('text-3xl font-bold leading-[42px]', className)}>
                         {title}
                   </h1>
                   {children}
-                  <Button className='bg-purple-500 ring-0 outline-0' onClick={handleClick}>
+                  <Button className='bg-[#36C2CE] ring-0 outline-0' onClick={handleClick}>
                         {buttonText || "Schedule Meeting"}
                   </Button>
             </div>

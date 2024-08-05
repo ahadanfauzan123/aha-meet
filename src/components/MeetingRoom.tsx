@@ -50,7 +50,7 @@ function MeetingRoom() {
             <CallControls />
 
             <DropdownMenu>
-                  <DropdownMenuTrigger className="cursor-pointer rounded-2xl bg-purple-500 bg-opacity-75 px-4 py-2 hover:bg-purple-700">
+                  <DropdownMenuTrigger className="cursor-pointer rounded-2xl bg-[#36C2CE] dark:bg-[#36C2CE] bg-opacity-75 px-4 py-2 hover:bg-purple-700">
                         <div className='flex items-center'>
                               <LayoutList size={20} className="text-white" />
 

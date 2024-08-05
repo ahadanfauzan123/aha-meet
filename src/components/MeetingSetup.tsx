@@ -24,10 +24,10 @@ function MeetingSetup({setIsSetupComplete}: {setIsSetupComplete: (value: boolean
       }, [isMicCamToggledOn, call?.camera, call?.microphone])
       
   return (
-    <div className='flex h-screen w-full flex-col items-center justify-center gap-3 text-white'>
+    <div className='flex h-screen w-full flex-col items-center justify-center gap-3'>
       <h1 className='text-2xl font-bold'>Setup</h1>
       <div className=' rounded-2xl w-full lg:w-[60%] min-h-[400px] flex items-center justify-center mx-auto'>
-            <VideoPreview className='rounded-2xl w-full h-full object-cover flex items-center justify-center' />
+            <VideoPreview  className='rounded-2xl w-full h-full object-cover flex items-center justify-center' />
       </div>
       <div className='flex h-16 items-center justify-center gap-3'>
             <label className='flex items-center justify-center gap-2 font-medium'>
@@ -42,7 +42,7 @@ function MeetingSetup({setIsSetupComplete}: {setIsSetupComplete: (value: boolean
       <Button onClick={() => {
             call.join();
             setIsSetupComplete(true)
-      }} className='rounded-md bg-purple-500 px-4 py-3'>
+      }} className='rounded-md bg-[#36C2CE] dark:bg-[#36C2CE] px-4 py-3 text-white'>
             Gabung Meeting
       </Button>
     </div>
