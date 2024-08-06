@@ -77,7 +77,7 @@ function Home() {
       <div className='w-full flex flex-col lg:flex-row sm:items-start sm:justify-between '>
         {/* left/top */} 
         <div className='flex flex-col justify-between p-5 bg-gradient-to-tr from-[#77E4C8] to-[#36C2CE] lg:w-[40%] h-[400px] rounded-xl'>
-          <h1 className='text-lg font-semibold'>next meeting: saturday, Mei 21 2024</h1>
+          <h1 className='text-lg font-semibold'>Welcome Back!</h1>
           <h1 className='text-5xl font-semibold'>{time}</h1>
 
         </div>

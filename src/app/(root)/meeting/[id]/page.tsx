@@ -6,6 +6,7 @@ import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk'
 import React, { useState } from 'react'
 import { useGetCallById } from '../../../../../hooks/useGetCallById'
 import Loader from '@/components/Loader'
+import NavbarRoom from '@/components/NavbarRoom'
 
 function Meeting({params}: {params: {id: string}}) {
   const {user,isLoaded} = useUser()
@@ -14,13 +15,16 @@ function Meeting({params}: {params: {id: string}}) {
 
   if(!isLoaded || isCallLoading) return <Loader />
   return (
-    <main className='h-screen w-full'>
+    <main className='h-screen w-full max-w-screen overflow-x-hidden bg-white dark:bg-gray-900'>
       <StreamCall call={call}>
         <StreamTheme>
           {!isSetupComplete ? (
             <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           ): (
+            <>
+            <NavbarRoom />
             <MeetingRoom />
+            </>
           )}
         </StreamTheme>
       </StreamCall>

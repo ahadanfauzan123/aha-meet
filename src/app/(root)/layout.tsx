@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     
-      <main>
+      <main className='overlow-x-hidden'>
         <StreamVideoProvider>
           {children}
         </StreamVideoProvider>

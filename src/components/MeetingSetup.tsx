@@ -24,8 +24,8 @@ function MeetingSetup({setIsSetupComplete}: {setIsSetupComplete: (value: boolean
       }, [isMicCamToggledOn, call?.camera, call?.microphone])
       
   return (
-    <div className='flex h-screen w-full flex-col items-center justify-center gap-3'>
-      <h1 className='text-2xl font-bold'>Setup</h1>
+    <div className='flex h-screen w-full flex-col items-center justify-center gap-3 overfloy-x-hidden'>
+      <h1 className='text-2xl font-bold'>Prepare Your Meeting</h1>
       <div className=' rounded-2xl w-full lg:w-[60%] min-h-[400px] flex items-center justify-center mx-auto'>
             <VideoPreview  className='rounded-2xl w-full h-full object-cover flex items-center justify-center' />
       </div>
