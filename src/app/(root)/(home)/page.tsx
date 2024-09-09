@@ -4,7 +4,7 @@ import MeetingModal from '@/components/MeetingModal'
 import { useUser } from '@clerk/nextjs'
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useRouter } from 'next/navigation'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useToast } from "@/components/ui/use-toast"
 
 
@@ -69,6 +69,23 @@ function Home() {
         })
     }
   }
+
+  // livechat
+  useEffect(() => {
+    // Memastikan bahwa window atau document hanya digunakan di sisi client
+    const Tawk_API = (window as any).Tawk_API || {};
+    const Tawk_LoadStart = new Date();
+
+    (function() {
+      const s1 = document.createElement('script');
+      const s0 = document.getElementsByTagName('script')[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/66df5ef250c10f7a00a661e0/1i7c8lphl';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode?.insertBefore(s1, s0);
+    })();
+  }, []);
 
   return (
   

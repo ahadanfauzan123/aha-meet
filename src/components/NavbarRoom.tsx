@@ -9,18 +9,26 @@ import Image from 'next/image';
 import LogoLight from "../../public/logoLight.png"
 import LogoDark from "../../public/logoDark.png"
 import { IoIosLink } from "react-icons/io";
+import { useToast } from './ui/use-toast';
 
 function NavbarRoom() {
       const [shareText, setShareText] = useState<String>('share');
+      const { toast } = useToast();
 
   const handleShare = () => {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href).then(() => {
         setShareText('copied');
-        setTimeout(() => {
-          setShareText('share');
-        }, 3000);
+        if(shareText === "copied") {
+          toast({
+            title: "✅ copied to clipboard"
+          })
+      }
+        // setTimeout(() => {
+        // // setShareText('share');
+        // }, 3000);
       });
+      
     }
   };
   return (
@@ -34,7 +42,7 @@ function NavbarRoom() {
       <div className='gap-5 flex items-center justify-between'>
             <div onClick={handleShare} className="cursor-pointer px-4 py-1.5 flex items-center justify-center space-x-1 text-white bg-[#36C2CE] rounded-md outline-0 ring-0 border-0">
                   <IoIosLink className="text-lg" />
-                  <h1 className="text-md">{shareText}</h1>
+                  <h1 className="text-md">share</h1>
             </div>
             <ModeToggle />
             

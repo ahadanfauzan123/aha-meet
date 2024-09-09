@@ -25,3 +25,31 @@ export const sidebarLinks = [
             route: "/personal-room",
       },
 ]
+
+export const feedbackItems = [
+      {
+            label: "disapointed",
+            icon: "/",
+            colorScheme: "bg-red-500"
+      },
+      {
+            label: "unhappy",
+            icon: "/",
+            colorScheme: "bg-red-500"
+      },
+      {
+            label: "medium",
+            icon: "/",
+            colorScheme: "bg-yellow-500"
+      },
+      {
+            label: "happy",
+            icon: "/",
+            colorScheme: "bg-green-500"
+      },
+      {
+            label: "excelent",
+            icon: "/",
+            colorScheme: "bg-blue-400"
+      },
+]

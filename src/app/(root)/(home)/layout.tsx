@@ -20,6 +20,7 @@ function HomeLayout({children}: {children: ReactNode}) {
                         {children}
                   </div>
             </div>
+         
       </div>
     </main>
   )
