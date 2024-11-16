@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react'
 import StreamVideoProvider from '../../../providers/StreamClientProvider'
 import { Metadata } from 'next';
-import { ThemeProvider } from '../../../providers/UiThemeProvider';
+// import { ThemeProvider } from '../../../providers/UiThemeProvider';
 
 export const metadata: Metadata = {
   title: "ahameet",
