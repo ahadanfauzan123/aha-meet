@@ -26,7 +26,7 @@ function MeetingRoom() {
       const isPersonalRoom = !!searchParams.get('personal')
       const [layout, setLayout] = useState<CallLayoutType>("speaker right")
       const [showParticipants, setShowParticipants] = useState(false)
-      const [showControls, setShowControls] = useState(false)
+      const [showControls, setShowControls] = useState(true) // or false
       const { useCallCallingState } = useCallStateHooks();
       const callingState = useCallCallingState()
       if(callingState !== CallingState.JOINED) {
